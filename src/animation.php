@@ -1,11 +1,5 @@
-<html>
- <head>
-  <title>PHP Exam</title>
- </head>
- <body>
- 	<?php 
-
- 	class Animation {
+<?php 	
+    class Animation {
 
  		/****************** ANIMATION CLASS ******************
  		This class takes is intended to animate and simulate 
@@ -21,7 +15,7 @@
     		//convert the string into an array
         	$str_array = str_split($init);	
         	//iterate until all particles will be off screen
-        	for ($i=0; $i<(count($str_array)/($speed)); $i++){
+        	while (1){
         		//next_array defaults to all empty particles, and will be filled in later				
         		$next_array = str_split(str_repeat(".",count($str_array)));				
         		//convert array back to a string - sub all characters for X's
@@ -81,9 +75,4 @@
 	        echo "</div>";   
     	}
  	}
- 		$instance = new Animation;
- 		$return_array = $instance->animate(2, "L.R...");
- 		$instance->display($return_array);
-	?> 
- </body>
-</html>
+?>
